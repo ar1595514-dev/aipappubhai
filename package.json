@@ -1,0 +1,18 @@
+{
+  "name": "pappu-bhai-ai",
+  "version": "1.0.0",
+  "description": "Pappu Bhai AI - Multi-agent share market auto trading platform (paper trading by default)",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server/index.js",
+    "dev": "node --watch --env-file-if-exists=.env server/index.js",
+    "reset-db": "node -e \"require('fs').rmSync('data',{recursive:true,force:true});console.log('DB reset')\""
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1"
+  }
+}
